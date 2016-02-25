@@ -26,7 +26,7 @@ namespace Extra_exercises_2
 
 
                 Game Ngame = new Game(game);
-
+            Console.WriteLine("kjhaoohafhafl");
 
                 Console.WriteLine("Generation 0");
                 Ngame.DrawGeneration();
