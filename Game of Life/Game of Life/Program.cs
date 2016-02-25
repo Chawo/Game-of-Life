@@ -11,7 +11,7 @@ namespace Game_of_Life
         static void Main(string[] args)
         {
 
-            int[,] grid = new int[,]
+            int[,] gameGrid = new int[,]
    {
         { 1, 0, 0, 0, 0, 0, 0, 0, 1, 1,},
         { 0, 0, 1, 0, 0, 1, 0, 0, 0, 0,},
@@ -23,25 +23,26 @@ namespace Game_of_Life
         { 1, 1, 0, 0, 1, 0, 0, 0, 0, 0,},
    };
 
-            Game lifeGrid = new Game(grid);
+            Game GameGrid = new Game(gameGrid);
+            
 
             Console.WriteLine("Generation 0");
-            lifeGrid.DrawGeneration();
+            GameGrid.DrawGeneration();
             Console.WriteLine();
 
-            while (lifeGrid.AliveCells() > 0)
+            while (GameGrid.AliveCells() > 0)
             {
                 string response;
 
                 Console.WriteLine();
-                Console.WriteLine("Generation {0}", lifeGrid.GenerationCount);
+                Console.WriteLine("Generation {0}", GameGrid.GenerationCount);
 
-                lifeGrid.ProcessGeneration();
-                lifeGrid.DrawGeneration();
+                GameGrid.ProcessGeneration();
+                GameGrid.DrawGeneration();
 
                 Console.WriteLine();
 
-                if (lifeGrid.AliveCells() == 0)
+                if (GameGrid.AliveCells() == 0)
                 {
                     Console.WriteLine("Every one died!");
                     Console.ReadLine();
