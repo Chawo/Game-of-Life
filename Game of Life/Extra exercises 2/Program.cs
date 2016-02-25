@@ -23,7 +23,8 @@ namespace Extra_exercises_2
             // om x större y och x mindre y
             Console.WriteLine("HEJ EMIL");
             Console.WriteLine("Hejhej");
-            Console.WriteLine("Det här är från min branch");
+            Console.WriteLine("Det här är från min branch!!");
+
         }
 
         bool flag = true;
