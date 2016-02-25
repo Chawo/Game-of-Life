@@ -10,7 +10,7 @@ namespace Extra_exercises_2
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("hjehejhe");
             
                 int[,] game = new int[,]
                 {
