@@ -22,6 +22,7 @@ namespace Extra_exercises_2
             // villkor
             // om x större y och x mindre y
             Console.WriteLine("HEJ EMIL");
+            Console.WriteLine("Hejhej");
         }
 
         bool flag = true;
