@@ -10,87 +10,120 @@ namespace Extra_exercises_2
     {
         static void Main(string[] args)
         {
-            Console.Write("Write first number: ");
-            int x = int.Parse(Console.ReadLine());
+            //Console.Write("Write first number: ");
+            //int x = int.Parse(Console.ReadLine());
 
-            Console.Write("Write second number: ");
-            int y = int.Parse(Console.ReadLine());
+            //Console.Write("Write second number: ");
+            //int y = int.Parse(Console.ReadLine());
 
-            Console.Write("Write third number: ");
-            int z = int.Parse(Console.ReadLine());
+            //Console.Write("Write third number: ");
+            //int z = int.Parse(Console.ReadLine());
 
-            // villkor
-            bool flag = true;
+            //// villkor
+            //bool flag = true;
 
-            var number = new Klass();
-            number.CheckCondition(x, y, z);
+            //var number = new Klass();
+            //number.CheckCondition(x, y, z);
 
 
 
-            Console.Write("Decimal".PadRight(10));
-            Console.Write("ASCII".PadRight(10));
-            Console.Write("Hex".PadRight(10));
-            Console.WriteLine();
+            //Console.Write("Decimal".PadRight(10));
+            //Console.Write("ASCII".PadRight(10));
+            //Console.Write("Hex".PadRight(10));
+            //Console.WriteLine();
 
-            int min = 0;
-            int max = 128;
-            for (int i = min; i < max; i++)
+            //int min = 0;
+            //int max = 128;
+            //for (int i = min; i < max; i++)
+            //{
+            //    // Get ascii character.
+            //    char c = (char)i;
+
+            //    // Get display string.
+            //    string display = string.Empty;
+            //    if (char.IsWhiteSpace(c))
+            //    {
+            //        display = c.ToString();
+            //        switch (c)
+            //        {
+            //            case '\t':
+            //                display = "\\t";
+            //                break;
+            //            case ' ':
+            //                display = "space";
+            //                break;
+            //            case '\n':
+            //                display = "\\n";
+            //                break;
+            //            case '\r':
+            //                display = "\\r";
+            //                break;
+            //            case '\v':
+            //                display = "\\v";
+            //                break;
+            //            case '\f':
+            //                display = "\\f";
+            //                break;
+            //        }
+            //    }
+            //    else if (char.IsControl(c))
+            //    {
+            //        display = "control";
+            //    }
+            //    else
+            //    {
+            //        display = c.ToString();
+            //    }
+            //    // Write table row.
+            //    Console.Write(i.ToString().PadRight(10));
+            //    Console.Write(display.PadRight(10));
+            //    Console.Write(i.ToString("X2"));
+            //    Console.WriteLine();
+
+            //    var hej = new Klass();
+            //    hej.CheckCondition(x, z, y, flag);
+            //}
+
+            //int[] arr = new int[] { 10, 50, 60, 70, 20, 10, 30, 40, 53, 12 };
+            //Console.ReadKey();
+
+            ///////////////////////////////////
+            ///////////  nr 5 & 6      ///////
+            /////////////////////////////////
+
+            int[,] arr = new int[20, 20];
+            Random random = new Random();
+
+            for (int i = 0; i < 50; i++)
             {
-                // Get ascii character.
-                char c = (char)i;
-
-                // Get display string.
-                string display = string.Empty;
-                if (char.IsWhiteSpace(c))
-                {
-                    display = c.ToString();
-                    switch (c)
-                    {
-                        case '\t':
-                            display = "\\t";
-                            break;
-                        case ' ':
-                            display = "space";
-                            break;
-                        case '\n':
-                            display = "\\n";
-                            break;
-                        case '\r':
-                            display = "\\r";
-                            break;
-                        case '\v':
-                            display = "\\v";
-                            break;
-                        case '\f':
-                            display = "\\f";
-                            break;
-                    }
-                }
-                else if (char.IsControl(c))
-                {
-                    display = "control";
-                }
-                else
-                {
-                    display = c.ToString();
-                }
-                // Write table row.
-                Console.Write(i.ToString().PadRight(10));
-                Console.Write(display.PadRight(10));
-                Console.Write(i.ToString("X2"));
-                Console.WriteLine();
-
-                var hej = new Klass();
-                hej.CheckCondition(x, z, y, flag);
+                int x = random.Next(20);
+                int y = random.Next(20);
+                arr[x, y] = 1;
             }
 
-            int[] arr = new int[] { 10, 50, 60, 70, 20, 10, 30, 40, 53, 12 };
-            Console.ReadKey();
+            Print(arr);
         }
-    }
+
+        public static void Print(int[,] arr)
+        {
+
+
+            foreach (var value in arr)
+            {
+                if (value == 0)
+                {
+                    Console.Write(" ");
+                }
+                else if (value > 0)
+                {
+                    Console.Write("*");
+                }
             }
         }
     }
+
+ }
+        
 
 
 
